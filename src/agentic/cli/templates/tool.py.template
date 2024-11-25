@@ -1,0 +1,23 @@
+from typing import Dict, Any
+from agentic.tools.base import BaseTool
+
+class {{tool_name}}(BaseTool):
+    """{{tool_description}}"""
+    
+    def __init__(self, config: Dict[str, Any]):
+        super().__init__(config)
+        # Initialize tool-specific components
+    
+    async def execute(self, parameters: Dict[str, Any]) -> Dict[str, Any]:
+        """Execute tool functionality"""
+        try:
+            # Implement tool logic
+            return {
+                "status": "success",
+                "result": None  # Add actual result
+            }
+        except Exception as e:
+            return {
+                "status": "error",
+                "error": str(e)
+            }
